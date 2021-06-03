@@ -18,11 +18,10 @@ public class Basket  {
     }
 
     public void addBallInBasket(Ball ball) {
-        if (ball == null) {
-            throw new NullPointerException();
+        if (ball != null) {
+            balls.add(ball);
+            weightBasket += ball.getWeight();
         }
-        balls.add(ball);
-        weightBasket += ball.getWeight();
     }
 
     public void removeBallInBasket(Ball ball) {
