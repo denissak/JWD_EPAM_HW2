@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Basket  {
 
+    private static final double MAX_WEIGTBASKET = 20_000;
     private static int count = 0;
     private List<Ball> balls;
     private double weightBasket;
@@ -18,7 +19,7 @@ public class Basket  {
     }
 
     public void addBallInBasket(Ball ball) {
-        if (ball != null) {
+        if (ball != null && weightBasket+ball.getWeight()<MAX_WEIGTBASKET) {
             balls.add(ball);
             weightBasket += ball.getWeight();
         }
