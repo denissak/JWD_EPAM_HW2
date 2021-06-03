@@ -40,4 +40,9 @@ public class Ball implements Serializable {
     public int hashCode() {
         return color.hashCode() + (int) (31 * weight);
     }
+    
+    @Override
+    public String toString() {
+        return "Ваш мячик имеет цвет " + getColor() + " и весит " + getWeight();
+    }
 }
